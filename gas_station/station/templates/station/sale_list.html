@@ -1,0 +1,10 @@
+{% extends "station/base.html" %}
+
+{% block content %}
+<h1>Список продаж</h1>
+<ul>
+    {% for sale in object_list %}
+    <li>{{ sale.date }} - {{ sale.fuel.name }} ({{ sale.volume }}л)</li>
+    {% endfor %}
+</ul>
+{% endblock %}

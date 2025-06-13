@@ -1,0 +1,10 @@
+{% extends "station/base.html" %}
+
+{% block content %}
+<h1>Список клиентов</h1>
+<ul>
+    {% for client in object_list %}
+    <li>{{ client.name }} - {{ client.phone }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

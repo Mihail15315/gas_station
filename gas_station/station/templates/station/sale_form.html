@@ -1,0 +1,12 @@
+{% extends "station/base.html" %}
+
+{% block content %}
+<h2>{% if object %}Редактирование{% else %}Добавление{% endif %} продажи</h2>
+<form method="post">
+    {% csrf_token %}
+    <table class="table">
+        {{ form.as_table }}
+    </table>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>
+{% endblock %}
